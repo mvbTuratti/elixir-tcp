@@ -3,7 +3,7 @@
 **Dependencies:**
 **Erlang and Elixir**
 
-To run
+To run, from inside folder tcp_server/
 
 mix run --no-halt
 
