@@ -1,4 +1,12 @@
-# KvUmbrella
+# TCP Server
 
-**TODO: Add description**
+**Dependencies:**
+**Erlang and Elixir**
+To run
+
+mix run --no-halt
+
+or
+
+iex -S mix
 
