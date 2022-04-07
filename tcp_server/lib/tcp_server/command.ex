@@ -29,6 +29,13 @@ defmodule TcpServer.Command do
     {:ok, response}
   end
 
+  defp get({:ok, body}, "jpeg") do
+    response = "HTTP/1.0 200 OK\nContent-Type: image/jpeg\nContent-Length: #{:erlang.size(body)}\n\n#{body}"
+    {:ok, response}
+  end
+
+
+
   defp get({:error, _reason}, _) do
     html = "<html><head><title>Not Found</title></head><body>Not Found</body></html>"
     response = "HTTP/1.0 404 Not Found\nContent-Type: text/html\nContent-Length: #{:erlang.size(html)}\n\n#{html}"

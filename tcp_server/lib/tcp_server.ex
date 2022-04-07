@@ -44,7 +44,7 @@ defmodule TcpServer do
   defp write_line(socket, {:ok, text}) do
 
     :gen_tcp.send(socket, text)
-    :timer.sleep(5000)
+    #:timer.sleep(5000)
     :gen_tcp.close(socket)
   end
 
